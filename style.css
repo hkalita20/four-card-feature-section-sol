@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body{
+    text-align: center;
+    margin: 80px 30px;
+    padding: 0; 
+    font-size: 15px;   
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(229, 6%, 66%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading{
+    line-height: 2rem;
+    font-size: 1.55rem;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+    font-stretch:expanded;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.div-part-head{
+    color: hsl(234, 12%, 34%);
+}
+
+.part p{
+    font-weight: 200;
+    line-height: 1.6rem;
+}
+
+.main-text{
+    margin-bottom: 4.3rem;
+    z-index: 2;
+}
+
+.part{
+    box-sizing: border-box;
+    padding: 1.4rem 2rem;
+    text-align: left;
+    min-height: 17rem;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    box-shadow: 0px 10px 44px -27px rgb(0 0 0);
+}
+.first::after{
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+.second::after{
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+.third::after{
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+.fourth::after{
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.icon{
+    height: 64px;
+    width: 64px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.part::after {
+    content: '';
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 2px;
+}
+
+.first .icon{
+    background:url(./images/icon-supervisor.svg);
+}
+
+.second .icon{
+    background: url(./images/icon-team-builder.svg);
+}
+.third .icon{
+    background: url(./images/icon-karma.svg);
+}
+
+.fourth .icon{
+    background: url(./images/icon-calculator.svg);
+}
+
+
+@media only screen and (max-width:285px){
+  .container .icon{
+    background-size: 60%;
+    background-repeat: no-repeat;
+    bottom: -5%;
+    right: 1%;
+  }
+}
+
+
+
+@media only screen and (min-width:780px){
+    .container{
+        display: grid;
+        grid-gap:20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 2%;
+        
+    }
+
+    .first{
+        grid-column-end: 2;
+        transform: translateY(50%);
+    }
+
+    .third{
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
+    .fourth{
+        grid-column-start: 3;
+        transform: translateY(50%);
+        }
+}
+
+@media only screen and (min-width:1200px){
+    .container{
+        margin: 0 14%;
+    }
+}
